@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
-import 'registration_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Auth Demo',
+      title: "Auth Demo",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LoginPage(),
-      routes: {
-        '/login': (context) => LoginPage(),
-        '/register': (context) => RegistrationPage(),
-      },
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const LoginPage(),
     );
   }
 }
